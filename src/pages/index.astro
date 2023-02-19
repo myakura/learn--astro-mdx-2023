@@ -1,15 +1,37 @@
 ---
+import { SITE_NAME } from '../util/const';
+
+const name = SITE_NAME;
+const title = name;
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{title}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>{name}</h1>
+
+		<section>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="page-md">page-md.md</a></li>
+				<li><a href="page-mdx">page-md.mdx</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Plugins used on this site</h2>
+			<ul>
+				<li>
+					<a href="https://github.com/jake-low/remark-sectionize"
+						>remark-sectionize</a>
+				</li>
+			</ul>
+		</section>
 	</body>
 </html>
