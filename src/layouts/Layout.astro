@@ -16,5 +16,22 @@ const title = formatTitle(name);
 	<body>
 		<h1>{name}</h1>
 		<slot />
+		<footer>
+			<p class="footerlinks">
+				<a href="/">Home</a>
+				<a href="https://github.com/myakura/learn--astro-mdx-2023">GitHub</a>
+			</p>
+		</footer>
 	</body>
 </html>
+
+<style>
+	footer {
+		margin-top: 3em;
+	}
+	.footerlinks {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1em;
+	}
+</style>
