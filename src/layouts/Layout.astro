@@ -1,8 +1,9 @@
 ---
 import { formatTitle } from '../util/title';
 
-const { name } = Astro.props;
-const title = formatTitle(name);
+const { name, frontmatter } = Astro.props;
+const pageName = frontmatter?.name ? frontmatter.name : name;
+const title = formatTitle(pageName);
 ---
 
 <html lang="en">
@@ -14,7 +15,7 @@ const title = formatTitle(name);
 		<title>{title}</title>
 	</head>
 	<body>
-		<h1>{name}</h1>
+		<h1>{pageName}</h1>
 		<slot />
 		<footer>
 			<p class="footerlinks">
