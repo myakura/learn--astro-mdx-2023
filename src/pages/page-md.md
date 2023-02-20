@@ -1,6 +1,6 @@
 ---
 layout: '../layouts/Layout.astro'
-title: A Markdown page
+name: A Markdown page
 ---
 
 # This is a Markdown page
