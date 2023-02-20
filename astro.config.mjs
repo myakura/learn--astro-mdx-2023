@@ -6,9 +6,5 @@ export default defineConfig({
 	markdown: {
 		remarkPlugins: [sectionize],
 	},
-	integrations: [
-		mdx({
-			remarkPlugins: [sectionize],
-		}),
-	],
+	integrations: [mdx()],
 });
