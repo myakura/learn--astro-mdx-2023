@@ -3,6 +3,8 @@ layout: '../layouts/Layout.astro'
 name: An MDX page
 ---
 
+import Note from '../components/Note.astro';
+
 export const message = 'Hello MDX!';
 
 {message}
@@ -24,3 +26,14 @@ Here is a list:
 Maecenas volutpat augue nec justo luctus sollicitudin. Quisque euismod sapien ut nunc sagittis euismod. Sed ex elit, egestas id nisi a, pharetra convallis erat.
 
 This is [a link]().
+
+## Section Level 3
+
+Sed semper mollis felis, sit amet tincidunt enim porta non. Suspendisse turpis lorem, aliquet id neque vel, mollis luctus velit. Quisque mollis mi tortor, eu sollicitudin metus laoreet in.
+
+<Note title="Etiam dictum eget risus non eleifend" headingLevel={4}>
+	Cras interdum eu nunc et tincidunt. Sed non arcu ac leo fermentum condimentum.
+	Quisque fringilla metus sem, aliquam hendrerit urna vulputate quis. In quis
+	molestie tortor. Aliquam egestas, odio sed auctor suscipit, quam lectus
+	maximus massa, porta egestas magna urna eu justo.
+</Note>

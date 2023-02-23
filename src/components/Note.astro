@@ -1,0 +1,25 @@
+---
+const { title, headingLevel = 2 } = Astro.props;
+const NoteHeading = `h${headingLevel}`;
+---
+
+<section class="Note">
+	<NoteHeading class="heading">{title}</NoteHeading>
+	<slot />
+</section>
+
+<style>
+	.Note {
+		padding: 1em;
+		background-color: #eee;
+	}
+	.Note > :global(:first-child) {
+		margin-top: 0;
+	}
+	.Note > :global(:last-child) {
+		margin-bottom: 0;
+	}
+	.heading::before {
+		content: 'Note: ';
+	}
+</style>
