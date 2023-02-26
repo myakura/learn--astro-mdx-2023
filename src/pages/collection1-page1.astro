@@ -1,0 +1,9 @@
+---
+import { getEntryBySlug } from 'astro:content';
+const entry = await getEntryBySlug('collection1', 'page1');
+const { Content, headings } = await entry.render();
+---
+
+<div>
+	<Content />
+</div>
