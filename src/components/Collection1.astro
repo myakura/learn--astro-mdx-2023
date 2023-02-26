@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+const collection1 = await getCollection('collection1');
+---
+
+<ul>
+	{collection1.map((item) => <li>{item.slug}</li>)}
+</ul>
