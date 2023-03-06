@@ -1,0 +1,20 @@
+---
+import { getEntryBySlug } from 'astro:content';
+
+import Layout from '../layouts/Layout.astro';
+
+const entry = await getEntryBySlug('collection3', 'page1');
+const { Content } = await entry.render();
+---
+
+<Layout>
+	<Content />
+</Layout>
+
+<style>
+	:global(section) {
+		padding: 1em;
+		background: rgba(0 0 0 / 5%);
+		outline: thin solid currentcolor;
+	}
+</style>
