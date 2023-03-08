@@ -1,0 +1,14 @@
+---
+name: Page 2
+---
+
+import data from '../../data/collection3-section.json';
+import Collection3Section from '../../components/Collection3Section.astro';
+
+# Collection 3 Page 2
+
+Hello from Collection 3!
+
+## Suspendisse pulvinar arcu
+
+{ data.map((item) => (<Collection3Section name={item.name}>{item.content}</Collection3Section>)) }
