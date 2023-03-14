@@ -18,4 +18,14 @@ const { Content } = await entry.render();
 
 <Layout>
 	<Content />
+	<footer>
+		{entry.data.tags && <p>tags: {entry.data.tags.join(', ')}</p>}
+		{
+			entry.data.date && (
+				<p>
+					date: <datetime>{entry.data.date}</datetime>
+				</p>
+			)
+		}
+	</footer>
 </Layout>
