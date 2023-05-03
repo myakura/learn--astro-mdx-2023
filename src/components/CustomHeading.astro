@@ -1,0 +1,15 @@
+---
+const { level = 2 } = Astro.props;
+const Heading = `h${level}`;
+---
+
+<Heading>
+	<span>{`h${level}: `}</span>
+	<slot />
+</Heading>
+
+<style>
+	span {
+		color: red;
+	}
+</style>
