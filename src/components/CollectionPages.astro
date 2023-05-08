@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+const pages = await getCollection('pages');
+---
+
+{
+	pages && (
+		<ul>
+			{pages.map(({ slug }) => (
+				<li>
+					<a href={slug}>{slug}</a>
+				</li>
+			))}
+		</ul>
+	)
+}

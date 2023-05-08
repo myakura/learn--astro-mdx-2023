@@ -3,6 +3,8 @@ layout: '../layouts/Layout.astro'
 name: 'Astro + MDX'
 ---
 
+import CollectionPages from '../components/CollectionPages.astro';
+
 ## Pages
 
 - [page-md.md](page-md)
@@ -13,14 +15,7 @@ name: 'Astro + MDX'
 
 ### Collection pages
 
-- [collection1/page1](collection1/page1)
-- [collection1/page2](collection1/page2)
-- [collection2/page1](collection2/page1)
-- [collection2/page2](collection2/page2)
-- [collection3/page1](collection3/page1)
-- [collection3/page2](collection3/page2)
-- [custom-components/page1](custom-components/page1)
-- [custom-components/page2](custom-components/page2)
+<CollectionPages />
 
 ## Plugins used on this site
 
