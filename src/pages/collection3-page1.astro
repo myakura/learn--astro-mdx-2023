@@ -3,7 +3,7 @@ import { getEntryBySlug } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
 
-const entry = await getEntryBySlug('collection3', 'page1');
+const entry = await getEntryBySlug('pages', 'collection3/page1');
 const { Content } = await entry.render();
 ---
 
